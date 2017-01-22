@@ -1,6 +1,6 @@
-# sell
+# Eleme Seller Detail
 
-> A Vue.js project
+> A Vue.js project bases on Vue2, Vue-Router2 and ES6.
 
 ## Build Setup
 
