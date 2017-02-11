@@ -22,7 +22,7 @@
   import urlParse from './common/js/util';
   import vHeader from './components/header/header';
 
-  const ERR_OK = 0;
+  // const ERR_OK = 0;
 
   export default {
     name: 'app',
@@ -37,12 +37,12 @@
       };
     },
     mounted() {
-      this.$http.get('/api/seller?id=' + this.seller.id).then((response) => {
+      this.$http.get('/sell/data.json?id=' + this.seller.id).then((response) => {
         response = response.body;
-        if (response.errno === ERR_OK) {
-          this.seller = Object.assign({}, this.seller, response.data);
+        // if (response.errno === ERR_OK) {
+          this.seller = Object.assign({}, this.seller, response.data.seller);
           console.log(this.seller);
-        }
+        // }
       });
     },
     components: {
