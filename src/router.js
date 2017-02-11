@@ -20,6 +20,6 @@ export default [
   },
   {
     path: '/',
-    redirect: '/sell/goods',
+    redirect: '/goods',
   },
 ];
