@@ -40,8 +40,8 @@
       this.$http.get('/sell/data.json?id=' + this.seller.id).then((response) => {
         response = response.body;
         // if (response.errno === ERR_OK) {
-          this.seller = Object.assign({}, this.seller, response.data.seller);
-          console.log(this.seller);
+        this.seller = Object.assign({}, this.seller, response.data.seller);
+        console.log(this.seller);
         // }
       });
     },
