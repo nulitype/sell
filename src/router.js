@@ -4,22 +4,22 @@ import seller from './components/seller/seller';
 
 export default [
   {
-    path: '/sell/goods',
+    path: '/goods',
     name: 'goods',
     component: goods,
   },
   {
-    path: '/sell/ratings',
+    path: '/ratings',
     name: 'ratings',
     component: ratings,
   },
   {
-    path: '/sell/seller',
+    path: '/seller',
     name: 'seller',
     component: seller,
   },
   {
-    path: '/sell',
+    path: '/',
     redirect: '/sell/goods',
   },
 ];
