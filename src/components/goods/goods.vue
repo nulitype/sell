@@ -47,7 +47,7 @@
   import cartcontrol from 'components/cartcontrol/cartcontrol';
   import food from '../food/food';
 
-  const ERR_OK = 0;
+  // const ERR_OK = 0;
 
   export default {
     props: {
@@ -90,14 +90,14 @@
       this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee'];
       this.$http.get('/sell/data.json').then((response) => {
         response = response.body;
-        if (response.errno === ERR_OK) {
-          this.goods = response.goods;
-          console.log(this.goods);
-          this.$nextTick(() => {
-            this.initScroll();
-            this.calculateHigh();
-          });
-        }
+        // if (response.errno === ERR_OK) {
+        this.goods = response.goods;
+        console.log(this.goods);
+        this.$nextTick(() => {
+          this.initScroll();
+          this.calculateHigh();
+        });
+        // }
       });
     },
     methods: {
