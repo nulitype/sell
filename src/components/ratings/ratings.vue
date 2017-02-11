@@ -60,7 +60,7 @@
   import formatDate from '../../common/js/date';
 
   const ALL = 2;
-  const ERR_OK = 0;
+  // const ERR_OK = 0;
 
   export default {
     props: {
@@ -92,16 +92,16 @@
       },
     },
     mounted() {
-      this.$http.get('/api/ratings').then((response) => {
+      this.$http.get('/sell/data.json').then((response) => {
         response = response.body;
-        if (response.errno === ERR_OK) {
-          this.ratings = response.data;
-          this.$nextTick(() => {
-            this.scroll = new BScroll(this.$refs.ratings, {
-              click: true,
-            });
+        // if (response.errno === ERR_OK) {
+        this.ratings = response.ratings;
+        this.$nextTick(() => {
+          this.scroll = new BScroll(this.$refs.ratings, {
+            click: true,
           });
-        }
+        });
+        // }
       });
       this.$nextTick(() => {
         this.$refs.ratingselect.$on('eventSelectType', (type) => {
